@@ -7,12 +7,12 @@
 }
 \arguments{
 \item{object}{A \code{densEstBayes()} fit object.}
-\item{newdata}{numerical vector of abscissae va}
+\item{newdata}{A numerical vector of abscissae values.}
 \item{cred.fit}{Boolean flag:\cr
 TRUE = compute the lower and upper limits of (100*credLev)\% pointwise credible intervals at 'newdata',\cr
 FALSE = do not computer credible interval limits (the default).}
 \item{credLev}{number between 0 and 1 such that the credible interval band has (100*credLev)\% approximate coverage. The default value is 0.95.}
-\item{...}{place-holder for other graphic parameters.}
+\item{...}{A place-holder for other prediction parameters.}
 }
 \value{A list is returned with the following components:
 \item{fit}{numerical vector of ordinate values corresponding to the density estimate.}

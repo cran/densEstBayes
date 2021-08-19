@@ -3,7 +3,7 @@
 /* Carries out Markov chain Monte Carlo for a Normal  
    random sample.                                    */
 
-/* Last changed: 17 SEP 2020 */
+/* Last changed: 18 JAN 2021 */
 
 #include <RcppArmadillo.h>
 #include "printPercMsgs.h"
@@ -80,7 +80,7 @@ List PoiSMMsliceInner(int numMCMC,int ncX,arma::vec y,arma::mat Cmat,
    };
    for (int gPos = 2; gPos <=numMCMC; gPos++)
    {
-      /* Print percentage progess message. */
+      /* Print percentage progess message: */
 
       percCnt = printPercMsgs(msgCode,numMCMC,gPos,percCnt);
 
@@ -105,8 +105,8 @@ List PoiSMMsliceInner(int numMCMC,int ncX,arma::vec y,arma::mat Cmat,
 
          aOnly = logUnnDensCurr + log(Rcpp::runif(1)(0));  
 
-         if (gPos==2) {w = 1.0;};
-         if (gPos>2) {w = sumDists/(gPos-2);};
+         if (gPos<=3) {w = 1.0;};
+         if (gPos>3) {w = sumDists/(gPos-2);};
 
          Lbetauj(0) = betauCurrj(0) - w*Rcpp::runif(1)(0);    
          Ubetauj(0) = Lbetauj(0) + w;

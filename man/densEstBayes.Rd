@@ -1,7 +1,7 @@
 \name{densEstBayes}
 \alias{densEstBayes}
 \title{Density estimation via Bayesian inference engines}
-\description{Construction of a high quality density estimate from a random sample is a fundamental problem in Statistics. This package delivers solutions to this problem by calling upon Bayesian inference engine algorithms with roots in the Machine Learning literature. Both stochastic and faster deterministic algorithms are provided. The stochastic options are Hamiltonian Monte Carlo and the no U-turn sampler (through the Stan inference engine) and slice sampling. The deterministic option is semiparametric mean field variational Bayes. The last of these options provides a very quick Bayesian density estimate, whereas the other options take longer to compute but, according to extensive simulation testing, are highly accurate. The essence of the approach is conversion of the density estimation problem to a Bayesian Poisson mixed model problem via binning on a fine grid. An attractive by-product of the binning approach is the ability to handle very large sample sizes. The number of bins, rather than the sample size, is the limiting factor.}
+\description{Construction of a high quality density estimate from a random sample is a fundamental problem in Statistics. This function delivers solutions to this problem by calling upon Bayesian inference engine algorithms with roots in the Machine Learning literature. Both stochastic and faster deterministic algorithms are provided. The stochastic options are Hamiltonian Monte Carlo and the no U-turn sampler (through the Stan inference engine) and slice sampling. The deterministic option is semiparametric mean field variational Bayes. The last of these options provides a very quick Bayesian density estimate, whereas the other options take longer to compute but, according to extensive simulation testing, are highly accurate. The essence of the approach is conversion of the density estimation problem to a Bayesian Poisson mixed model problem via binning on a fine grid. An attractive by-product of the binning approach is the ability to handle very large sample sizes. The number of bins, rather than the sample size, is the limiting factor.}
 \usage{
 densEstBayes(x,method,verbose,control)
 }
@@ -26,7 +26,7 @@ The setting \code{method} = "slice" corresponds to slice sampling (e.g. Neal, 20
 The setting \code{method} = "SMFVB" uses a semiparametric mean field variational Bayes approach as summarised in Algorithm 1 of Luts and Wand (2015). Comparatively speaking, this method leads to a very quick density estimate but at some accuracy and convergence reliability costs.
 }
 \value{An object of class \code{densEstBayes}, which is a list with the following components:
-\item{method}{the value of \code{method}} 
+\item{method}{the value of \code{method}.} 
 \item{range.x}{a numerical vector with 2 entries such that range.x[1] is the lower limit and range.x[2] is the upper limit of the interval over which the density estimate was computed.}
 \item{intKnots}{a numerical vector containing the locations of the interior knots used in the cubic O'Sullivan spline basis}
 \item{determFitObj}{if \code{method} is "SMFVB" then \code{determFitObj} is a list with the following components:\cr
@@ -40,7 +40,7 @@ If \code{method} is "HMC", "NUTS" or "slice" then \code{determFitObj} is returne
 betauMCMC: numerical matrix containing Markov chain Monte Carlo draws from the posterior distribution of the basis function coefficients, with rows corresponding to the linear component coefficients (first two rows) and penalised spline coefficients (remainining rows) and columns corresponding to the samples.\cr
 sigsqMCMC: numerical vector containing Markov chain Monte Carlo draws from the posterior distribution of the variance parameter in the mixed model-based penalised spline model.\cr
 If \code{method} is "SMFVB" then \code{stochaFitObj} is returned as NULL.}
-\item{xname}{ONE OF THE LAST THINGS TO ADD.}
+\item{xname}{A character string that matches the \code{x} object. For example, if the call to \code{densEstBayes()} is \code{dest <- densEstBayes(alexandrina)} then \code{xname} is "alexandrina".}
 \item{sampHexTran}{Sample hexiles of the transformed input data to be used for possible checking Markov chains Monte Carlo samples.}
 }
 \author{Matt P. Wand \email{matt.wand@uts.edu.au}}

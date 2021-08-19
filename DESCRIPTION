@@ -1,6 +1,6 @@
 Package: densEstBayes
-Version: 1.0-1
-Date: 2020-09-28
+Version: 1.0-2
+Date: 2021-08-19
 Title: Density Estimation via Bayesian Inference Engines
 Authors@R: person("Matt P.", "Wand", role = c("aut","cre"),
                   email = "matt.wand@uts.edu.au",
@@ -16,7 +16,7 @@ LinkingTo: BH, Rcpp, RcppArmadillo, RcppEigen, RcppParallel,
         StanHeaders, rstan
 SystemRequirements: GNU make
 NeedsCompilation: yes
-Packaged: 2020-09-27 21:42:01 UTC; mwand
+Packaged: 2021-08-19 05:25:04 UTC; mwand
 Author: Matt P. Wand [aut, cre] (<https://orcid.org/0000-0003-2555-896X>)
 Repository: CRAN
-Date/Publication: 2020-09-30 08:50:05 UTC
+Date/Publication: 2021-08-19 08:40:02 UTC
