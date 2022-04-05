@@ -1,5 +1,4 @@
-ea28fa21cd6b4b7cdcc2e0cc87a7b161 *DESCRIPTION
-499d89b616df4841a69e63f87cbca5f9 *INDEX
+474eb94673b29add8bfe49e0eb269b60 *DESCRIPTION
 3b09f41a493e871a6159fdc3a85922e9 *NAMESPACE
 d72c13ba35020e69f356c1420bde8a26 *R/MarronWandParm.r
 75a56b0cadd2f09f8acc4201c82a976b *R/PoiSimMixModMCMC.r
@@ -25,8 +24,8 @@ ff0344d1872b3d6e632e80e21077054d *build/PoissonSimpleMixedModel.rds
 f407eee8fc40c228d11e6e823767ed74 *build/vignette.rds
 1cc60bdd8610449d30184e0bb374bf46 *configure
 6bea7bdbd44ffa386677bfdec2d1984b *configure.win
-13184f6d11a7251d1d0e3aff1c241e1c *data/OldFaithful2011.rda
-fcc2c29dc8ff7b38a055af809b4e0828 *data/incomeUK.rda
+0ea6972d5593f318254d9d6a9abe65e1 *data/OldFaithful2011.rda
+c03946882a6b5227387100d6e0735794 *data/incomeUK.rda
 1c1536f7114011108eea121502af24f8 *inst/doc/manual.Rnw
 41f7b0ad1286b2b99dc20e6202ce793c *inst/doc/manual.pdf
 855c064dbf8deaff96c8dc8a87169109 *inst/include/stan_meta_header.hpp
