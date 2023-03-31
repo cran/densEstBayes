@@ -29,6 +29,6 @@ export(checkChains)
 export(dMarronWand)
 export(rMarronWand)
 export(densEstBayesVignette)
-
-
+importFrom(rstantools,rstan_config)
+import(methods)
 
